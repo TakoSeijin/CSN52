@@ -1,60 +1,57 @@
 <!doctype html>
+<html lang="en">
 
-<html lang= "en">
-		<head>
-				<meta charset="utf-8">
-				<title>title of my file</title>
-		</head>
+<head>
+    <meta charset="utf-8">
+    <title>title of my file</title>
+</head>
 
-		<body>
-			<!--<p id="lorem">Lorem ipsum dolor sit amet.</p>-->
+<body>
+    <!--<p id="lorem">Lorem ipsum dolor sit amet.</p>-->
+    <script>
+    var link;
 
-				<script>
-function carlPoem()
-{
-		alert("Ready for Carl's poem?");
-		var poem = poemAssembler();
-		var p;
-		for (i = 0; i < poem.length; i++) 
-		{
-				p = document.createElement("p");
-				p.innerHTML= poem;
-				document.body.appendChild(p);
-				
-		}
-/*
-		document.open()
-		document.write("<h1>'Limited' by Carl Sandburg</h1>");
-		document.write('<h6>Source: <a href= "http://carl-sandburg.com/limited.htm"> http://carl-sandburg.com/limited.htm </a></h6>');
-		document.write("<p>"+ poem + "</p>");
+    function stringToLink() {
 
-		document.write("<h2> Nicer printout - 1</h2>")
+        		var replaceTheseStrings = {
 
-		for (i = 0; i < poem.length; i++) {
-				
-				document.write("<p>"+ poem[i] + "</p>");
-		}
+            "trains": "a href= 'http://en.wikipedia.org/wiki/Train'>trains</a>",
+            "Omaha": "<a href= 'http://en.wikipedia.org/wiki/Omaha'</a>"
+        };
+            var poem.innerHTML = replaceTheseStrings.this;
+            }
+        }
+        
+        
 
-		document.write("<h2>Random printout - 2<h2>");
+        return replaceTheseStrings;
+    }
 
-		var randomArrayIndex;
-		ent.write("<p>"+ poem[randomArrayIndex] + "</p>");
-		}
+    function carlPoem() {
+        alert("Ready for Carl's poem?");
+        var poem = poemAssembler();
+        var p;
+        for (i = 0; i < poem.length; i++) {
+            p = document.createElement("p");
+            p.innerHTML = poem;
+            document.body.appendChild(p);
 
-		document.close();
-		*/
-}
+        }
+    }
 
-function poemAssembler()
-{
-		var limited = ['I AM riding on a limited express, one of the crack trains of the nation.','Hurtling across the prairie into blue haze and dark air go fifteen all-steel coaches holding a thousand people.', '(All the coaches shall be scrap and rust and all the men and women laughing in the diners and sleepers shall pass to ashes.)', 'I ask a man in the smoker where he is going and he answers: "Omaha."'];
-     return limited;
-     
-}
+    function poemAssembler() 
+    {
+        var limited = ['I AM riding on a limited express, one of the crack trains of the nation.', 'Hurtling across the prairie into blue haze and dark air go fifteen all-steel coaches holding a thousand people.', '(All the coaches shall be scrap and rust and all the men and women laughing in the diners and sleepers shall pass to ashes.)', 'I ask a man in the smoker where he is going and he answers: "Omaha."'];
 
-window.onload = carlPoem;
+        var stringRplObjKeys = Object.keys(stringRplObjKeys)
 
-				</script>
-		</body>
+        
 
-	</html>
+        return limited;
+    }
+
+    window.onload = carlPoem;
+    </script>
+</body>
+
+</html>
