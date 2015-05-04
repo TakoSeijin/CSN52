@@ -3,28 +3,25 @@
 
 <head>
     <meta charset="utf-8">
-    <title>title of my file</title>
+    <title>Poem Assembler</title>
 </head>
 
 <body>
     <!--<p id="lorem">Lorem ipsum dolor sit amet.</p>-->
     <script>
-    function stringToLink() {
+    var stringRplObj = {
 
-        var replaceTheseStrings = {
+        "trains": "a href= 'http://en.wikipedia.org/wiki/Train'>trains</a>",
+        "Omaha": "<a href= 'http://en.wikipedia.org/wiki/Omaha'</a>"
+    };
+    var stringRplObjKeys = Object.keys(stringRplObj);
+    var poem = poemAssembler();
+    var p;
 
-            "trains": "a href= 'http://en.wikipedia.org/wiki/Train'>trains</a>",
-            "Omaha": "<a href= 'http://en.wikipedia.org/wiki/Omaha'</a>"
-        };
-        return replaceTheseStrings;
-
-    }
 
     function carlPoem() {
         alert("Ready for Carl's poem?");
-        var poem = poemAssembler();
-        var links = findandReplace();
-        var p;
+
     }
 
 
@@ -32,25 +29,24 @@
         var limited = ['I AM riding on a limited express, one of the crack trains of the nation.', 'Hurtling across the prairie into blue haze and dark air go fifteen all-steel coaches holding a thousand people.', '(All the coaches shall be scrap and rust and all the men and women laughing in the diners and sleepers shall pass to ashes.)', 'I ask a man in the smoker where he is going and he answers: "Omaha."'];
 
 
-        var stringRplObjKeys = Object.keys(stringRplObj);
-
-
         for (i = 0; i < limited.length; i++) {
+            p = document.createElement("p");
+            p.innerHTML = poem[i];
+            document.body.appendChild(p);
+
             for (j = 0; j < stringRplObjKeys.length; j++) {
 
-                p = document.createElement("p");
-                p.innerHTML = poem[i];
-                document.body.appendChild(p);
+
 
             }
 
 
-            return limited;
+            
         }
+        return limited;
     }
 
     window.onload = carlPoem;
-    
     </script>
 </body>
 
