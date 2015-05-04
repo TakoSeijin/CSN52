@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>test </title>
+</head>
+
+<body>
+    <p></p>
+</body>
+<footer>
+    <script type="text/javascript">
+    function carlPoem() 
+    {
+    		testme();
+        //alert("Ready for Carl's poem?");
+
+        var poem = poemAssembler(createStringReplacements());
+
+        var p;
+        for (i = 0; i < poem.length; i++) {
+            p = document.createElement("p");
+            p.innerHTML = poem[i];
+            document.body.appendChild(p);
+        }
+
+    }
+
+    function testme() {
+        var str = "I AM riding on a limited express, one of the crack trains of the nation.";
+        str.replace("trains", "<a href= 'http://en.wikipedia.org/wiki/Omaha'></a>");
+        console.log(str);
+    }
+    </script>
+</footer>
+
+</html>
