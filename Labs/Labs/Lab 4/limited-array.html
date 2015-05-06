@@ -14,7 +14,7 @@
         "trains": "a href= 'http://en.wikipedia.org/wiki/Train'>trains</a>",
         "Omaha": "<a href= 'http://en.wikipedia.org/wiki/Omaha'</a>"
     };
-    var stringRplObjKeys = Object.keys(stringRplObj);
+  
     var poem = poemAssembler();
     var p;
 
@@ -27,25 +27,23 @@
 
     function poemAssembler(stringRplObj) {
         var limited = ['I AM riding on a limited express, one of the crack trains of the nation.', 'Hurtling across the prairie into blue haze and dark air go fifteen all-steel coaches holding a thousand people.', '(All the coaches shall be scrap and rust and all the men and women laughing in the diners and sleepers shall pass to ashes.)', 'I ask a man in the smoker where he is going and he answers: "Omaha."'];
-
+        var stringRplObjKeys = Object.keys(stringRplObj);
 
         for (i = 0; i < limited.length; i++) {
-            p = document.createElement("p");
-            p.innerHTML = poem[i];
-            document.body.appendChild(p);
 
             for (j = 0; j < stringRplObjKeys.length; j++) {
 
-
-
+            		limited[i] = limited[i].replace(stringRplObjKeys[j],stringRplObj[stringRplObjKeys]);
             }
-
-
             
         }
         return limited;
     }
-
+/*
+ p = document.createElement("p");
+            p.innerHTML = poem[i];
+            document.body.appendChild(p);
+*/
     window.onload = carlPoem;
     </script>
 </body>
