@@ -3,25 +3,30 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Poem Assembler</title>
+    <title>Limited</title>
 </head>
 
 <body>
-    <!--<p id="lorem">Lorem ipsum dolor sit amet.</p>-->
+    <p id="lorem">Lorem ipsum dolor sit amet.
     <script>
-    var stringRplObj = {
 
-        "trains": "a href= 'http://en.wikipedia.org/wiki/Train'>trains</a>",
-        "Omaha": "<a href= 'http://en.wikipedia.org/wiki/Omaha'</a>"
-    };
+
+
   
-    var poem = poemAssembler();
-    var p;
+    var poem = poemAssembler(createStringReplacement());
 
+    
 
-    function carlPoem() {
+    function carlPoem() 
+    {
         alert("Ready for Carl's poem?");
-
+        var p;
+    		for (i = 0; i < poem.length;  i++) {
+    		p = document.createElement("p");
+      	p.innerHTML = poem[i];
+      	document.body.appendChild(p);
+    }
+    
     }
 
 
@@ -37,13 +42,17 @@
             }
             
         }
+
         return limited;
     }
-/*
- p = document.createElement("p");
-            p.innerHTML = poem[i];
-            document.body.appendChild(p);
-*/
+function createStringnReplacements() 
+{
+	    var stringRplObj = {
+
+        "trains": "a href= 'http://en.wikipedia.org/wiki/Train'>trains</a>",
+        "Omaha": "<a href= 'http://en.wikipedia.org/wiki/Omaha'</a>"
+    };
+}
     window.onload = carlPoem;
     </script>
 </body>
