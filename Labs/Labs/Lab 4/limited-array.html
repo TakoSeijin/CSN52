@@ -7,11 +7,10 @@
 </head>
 
 <body>
-    <p id="lorem">Lorem ipsum dolor sit amet.
+    <p id="">Limited:</p>
         <script>
+
         var poem = poemAssembler(createStringReplacements());
-
-
 
         function carlPoem() {
             alert("Ready for Carl's poem?");
@@ -23,7 +22,6 @@
             }
 
         }
-
 
         function poemAssembler(stringRplObj) {
             var limited = ['I AM riding on a limited express, one of the crack trains of the nation.', 'Hurtling across the prairie into blue haze and dark air go fifteen all-steel coaches holding a thousand people.', '(All the coaches shall be scrap and rust and all the men and women laughing in the diners and sleepers shall pass to ashes.)', 'I ask a man in the smoker where he is going and he answers: "Omaha."'];
@@ -44,8 +42,8 @@
         function createStringReplacements() {
             var replaceTheseStringsObj = {
 
-                "trains": "a href= 'http://en.wikipedia.org/wiki/Train'>trains</a>",
-                "Omaha": "<a href= 'http://en.wikipedia.org/wiki/Omaha'</a>"
+                "trains": "<a href= 'http://en.wikipedia.org/wiki/Train'>trains</a>",
+                "Omaha": "<a href= 'http://en.wikipedia.org/wiki/Omaha'>Omaha</a>"
             };
 
            return replaceTheseStringsObj;
