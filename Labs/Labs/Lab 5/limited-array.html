@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Limited</title>
+</head>
+
+<body>
+    <script>
+    function carlPoem() {
+    	//start test
+    		var finalVerPoem = processPoem(poemAssembler(),strReplLineFunc);
+    	//end
+        //alert("Ready for Carl's poem?");
+
+        var poem = poemAssembler();
+
+        var p;
+        for (i = 0; i < poem.length; i++) {
+            p = document.createElement("p");
+            p.innerHTML = poem;
+            document.body.appendChild(p);
+
+        }
+
+    }
+    function processPoem(poemLinesArr, strReplLineFunc)
+    {
+
+    		for (var i = 0; i < poemLinesArr.length; i++) 
+    		{
+    			poemLinesArr[i] = strReplLineFunc(poemLinesArr[i]);
+    		}
+    		return poemLinesArr;
+    }
+
+    function poemAssembler() {
+        var limited = ['I AM riding on a limited express, one of the crack trains of the nation.', 'Hurtling across the prairie into blue haze and dark air go fifteen all-steel coaches holding a thousand people.', '(All the coaches shall be scrap and rust and all the men and women laughing in the diners and sleepers shall pass to ashes.)', 'I ask a man in the smoker where he is going and he answers: "Omaha."'];
+        return limited;
+
+    }
+
+    function strReplLineFunc(poemLineStr)
+    {
+    		console.log("here is the line that strReplLineFunc received: " + poemLineStr);
+    }
+
+    window.onload = carlPoem;
+    </script>
+</body>
+
+</html>
